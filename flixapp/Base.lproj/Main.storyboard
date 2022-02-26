@@ -63,7 +63,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Movies" id="7SO-tb-D3n"/>
+                    <navigationItem key="navigationItem" title="Movies" id="7SO-tb-D3n">
+                        <barButtonItem key="leftBarButtonItem" image="projector_tabbar_item" id="gPt-ek-8gt"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="qf1-Ya-JL6" id="hli-Gs-RfZ"/>
                     </connections>
@@ -92,6 +94,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="projector_tabbar_item" width="21" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
