@@ -77,5 +77,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
 
+    // Mark - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        print("Loading up the data screen")
+        
+        // find the selected movie
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+        
+        // pass the selected movie to the details view controller
+        
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+        
+        //the movie cells are no longer selected, it refreshes the selection
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }
 
